@@ -20,6 +20,30 @@
 }
 
 .left-side {
+    .counter-pisos-cnt {
+        display: flex;
+        .counter-pisos {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            align-self: center;
+            button {
+                background-color: #C4C4C4;
+                height: 20px;
+                width: 25px;
+                border: none;
+                cursor: pointer;
+            }
+            #button-up {
+                clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                margin-bottom: 2px;
+            }
+            #button-down {
+                clip-path: polygon(50% 100%, 0 0, 100% 0);
+                margin-top: 2px;
+            }
+        }
+    }
     h1 {
         color: orangered;
     }
@@ -84,6 +108,57 @@
                 }
             }
         }
+    }
+}
+
+.right-side {
+    margin: 30px 10px;
+    width: 40%;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    .row-areas {
+        display: flex;
+        column-gap: 40px;
+        .areas {
+            font-size: 12px;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+        .numero-metros {
+            margin-top: 0;
+            font-size: 38px;
+            cursor: pointer;
+        }
+        #area-rentable {
+            color: orangered;
+            opacity: 1;
+        }
+        #metros-rentable {
+            color: #000;
+            opacity: 1;
+        }
+        #area-alfombra {
+            color: #000;
+            opacity: 0.2;
+        }
+        #metros-alfombra {
+            color: #000;
+            opacity: 0.2;
+        }
+        #area-total {
+            color: #000;
+            opacity: 0.2;
+        }
+        #metros-total {
+            color: #000;
+            opacity: 0.2;
+        }
+    }
+    #img-plano {
+        width: 100%;
     }
 }
 

@@ -18,7 +18,14 @@
         <section id="popup-sct">
             <!--lado izq-->
             <div class="left-side">
-                <h1>PISO 09</h1>
+                <div class="counter-pisos-cnt">
+                    <h1>PISO <span id="numero-de-piso">1</span></h1>
+                </br>
+                    <div class="counter-pisos">
+                        <button id="button-up"> </button>
+                        <button id="button-down"> </button>
+                    </div>
+                </div>
                 <!--componente imagen + info disponibilidad y amenities-->
                 <div class="info-dispo">
                     <img src="./assets/FOTO HDR 3 (1) 4.png" alt="imagen edificio">
@@ -44,9 +51,27 @@
                     </div> 
                 </div>
             </div>
+
+
             <!--lado der-->
             <div class="right-side">
-
+                <!--row con areas-->
+                <div class="row-areas">
+                    <div class="column-area-metros">
+                        <p class="areas" id="area-rentable">ÁREA RENTABLE</p>
+                        <h1 class="numero-metros" id="metros-rentable">2408 m²</h1>
+                    </div>
+                    <div class="column-area-metros">
+                        <p class="areas" id="area-alfombra">ÁREA ALFOMBRA</p>
+                        <h1 class="numero-metros" id="metros-alfombra">2102 m²</h1>
+                    </div>
+                    <div class="column-area-metros">
+                        <p class="areas" id="area-total">ÁREA TOTAL</p>
+                        <h1 class="numero-metros" id="metros-total">2546 m²</h1>
+                    </div>
+                </div>
+                <!--img plano-->
+                <img id="img-plano" src="./assets/MO_rentable_1234.jpg" alt="plano área renable">
             </div>
         </section>
     </main>
