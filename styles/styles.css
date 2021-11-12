@@ -18,6 +18,8 @@
 }
 
 #popup-sct {
+  visibility: hidden;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,6 +37,10 @@
   display: flex;
 }
 
+.left-side .counter-pisos-cnt h1 {
+  width: 90px;
+}
+
 .left-side .counter-pisos-cnt .counter-pisos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,8 +50,13 @@
       -ms-flex-direction: column;
           flex-direction: column;
   margin-left: 20px;
+  position: relative;
   -ms-flex-item-align: center;
       align-self: center;
+}
+
+.left-side .counter-pisos-cnt .counter-pisos #separador-piso-btns {
+  width: 30px;
 }
 
 .left-side .counter-pisos-cnt .counter-pisos button {

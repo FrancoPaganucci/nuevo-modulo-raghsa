@@ -7,9 +7,24 @@ const sup_total = document.getElementById('metros-total');
 const piso_up = document.getElementById('button-up');
 const piso_down = document.getElementById('button-down');
 const piso = document.getElementById('numero-de-piso');
-
-// evento mostrar módulo
-// pendiente
+const plano = document.getElementById('img-plano');
+const modulo_disponibilidad = document.getElementById('popup-sct');
+const ver_popup = document.getElementById('pop-up-btn');
+// eventos mostrar/ocultar módulo
+function popUpOn() {
+    modulo_disponibilidad.style.visibility = "visible";
+    modulo_disponibilidad.style.zIndex = -1000;
+    ver_popup.removeEventListener('click', popUpOn);
+    ver_popup.addEventListener('click', popUpOff);
+}
+function popUpOff() {
+    modulo_disponibilidad.style.visibility = "hidden";
+    modulo_disponibilidad.style.zIndex = 1000;
+    modulo_disponibilidad.style.top = "90px";
+    ver_popup.removeEventListener('click', popUpOff);
+    ver_popup.addEventListener('click', popUpOn);
+}
+ver_popup.addEventListener('click', popUpOn);
 
 // eventos de área
 function areaRentableOn() {
@@ -22,7 +37,7 @@ function areaRentableOn() {
     area_total.style.color = "#000";
     area_total.style.opacity = 0.2;
     sup_total.style.opacity = 0.2;
-    
+    plano.setAttribute('src', "./assets/MO_rentable_1234.jpg");
 };
 function areaAlfombraOn() {
     area_alfombra.style.color = "orangered";
@@ -34,6 +49,7 @@ function areaAlfombraOn() {
     area_total.style.color = "#000";
     area_total.style.opacity = 0.2;
     sup_total.style.opacity = 0.2;
+    plano.setAttribute('src', "./assets/MO_alfombra_1046.jpg");
 };
 function areaTotalOn() {
     area_total.style.color = "orangered";
@@ -45,6 +61,7 @@ function areaTotalOn() {
     area_alfombra.style.color = "#000";
     area_alfombra.style.opacity = 0.2;
     sup_alfombra.style.opacity = 0.2;
+    plano.setAttribute('src', "./assets/MO_total_1525.jpg");
 };
 area_rentable.addEventListener('click', areaRentableOn);
 sup_rentable.addEventListener('click', areaRentableOn);
@@ -64,6 +81,3 @@ function pisoDown() {
 }
 piso_up.addEventListener('click', pisoUp);
 piso_down.addEventListener('click', pisoDown);
-
-// evento recorrido 360º
-// pendiente

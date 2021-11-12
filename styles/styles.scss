@@ -15,6 +15,8 @@
 }
 
 #popup-sct {
+    visibility: hidden;
+    position: absolute;
     display: flex;
     width: 100%;
 }
@@ -22,11 +24,18 @@
 .left-side {
     .counter-pisos-cnt {
         display: flex;
+        h1 {
+            width: 90px;
+        }
         .counter-pisos {
             display: flex;
             flex-direction: column;
             margin-left: 20px;
+            position: relative;
             align-self: center;
+            #separador-piso-btns {
+                width: 30px;
+            }
             button {
                 background-color: #C4C4C4;
                 height: 20px;
