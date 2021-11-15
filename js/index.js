@@ -10,21 +10,28 @@ const piso = document.getElementById('numero-de-piso');
 const plano = document.getElementById('img-plano');
 const modulo_disponibilidad = document.getElementById('popup-sct');
 const ver_popup = document.getElementById('pop-up-btn');
+const close_popup = document.getElementById('close-popup');
+const main_view = document.getElementById('mainview-sct');
 // eventos mostrar/ocultar módulo
 function popUpOn() {
     modulo_disponibilidad.style.visibility = "visible";
-    modulo_disponibilidad.style.zIndex = -1000;
-    ver_popup.removeEventListener('click', popUpOn);
-    ver_popup.addEventListener('click', popUpOff);
+    modulo_disponibilidad.style.zIndex = 1000;
+    modulo_disponibilidad.style.top = "10px";
+    //ver_popup.removeEventListener('click', popUpOn);
+    //ver_popup.addEventListener('click', popUpOff);
+    main_view.style.visibility = "hidden";
+    main_view.style.zIndex = -1000;
 }
 function popUpOff() {
     modulo_disponibilidad.style.visibility = "hidden";
-    modulo_disponibilidad.style.zIndex = 1000;
-    modulo_disponibilidad.style.top = "90px";
-    ver_popup.removeEventListener('click', popUpOff);
-    ver_popup.addEventListener('click', popUpOn);
+    modulo_disponibilidad.style.zIndex = -1000;
+    //ver_popup.removeEventListener('click', popUpOff);
+    //ver_popup.addEventListener('click', popUpOn);
+    main_view.style.visibility = "visible";
+    main_view.style.zIndex = 1000;
 }
 ver_popup.addEventListener('click', popUpOn);
+close_popup.addEventListener('click', popUpOff);
 
 // eventos de área
 function areaRentableOn() {
