@@ -12,7 +12,8 @@ const modulo_disponibilidad = document.getElementById('popup-sct');
 const ver_popup = document.getElementById('pop-up-btn');
 const close_popup = document.getElementById('close-popup');
 const main_view = document.getElementById('mainview-sct');
-// eventos mostrar/ocultar módulo
+
+/*// eventos mostrar/ocultar módulo
 function popUpOn() {
     modulo_disponibilidad.style.visibility = "visible";
     modulo_disponibilidad.style.zIndex = 1000;
@@ -31,7 +32,7 @@ function popUpOff() {
     main_view.style.zIndex = 1000;
 }
 ver_popup.addEventListener('click', popUpOn);
-close_popup.addEventListener('click', popUpOff);
+close_popup.addEventListener('click', popUpOff);*/
 
 // eventos de área
 function areaRentableOn() {

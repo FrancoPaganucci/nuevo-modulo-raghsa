@@ -10,37 +10,18 @@
 </head>
 <body>
     <main>
-        <!--seccion normal-->
-        <section id="mainview-sct">
-            <!--izquierda-->
-            <div class="left-sct">
-                <h1 id="paso">01</h1>
-                <h1 id="instrucciones">Elige el piso de tu preferencia</h1>
-                <button type="button" id="pop-up-btn">MOSTRAR/OCULTAR (seleccionar piso)</button>
-            </div>
-            <!--medio-->
-            <div class="middle-sct">
-                <img src="./assets/FOTO HDR 3 (1) 2.png" alt="vista render">
-            </div>
-            <!--derecha-->
-            <div class="right-sct">
-                <h1 id="direccion">AV. DEL LIBERTADOR 7208 <br>
-                    C1429BMS <br>
-                    CABA
-                </h1>
-                <h3 class="ver-en">Ver en <a href="">google</a></h3>
-                <h3 class="ver-en">Ver en <a href="">waze</a></h3>
-            </div>
-        </section>
-
-
-
-
-        <!--seccion popup--> 
-        <section id="popup-sct">
+        <section id="modulo-sct">
             <div id="close-popup"></div>
             <!--lado izq-->
             <div class="left-side">
+                <div class="info-dispo">
+                    <img id="render" src="./assets/FOTO HDR 3 (1) 4.png" alt="imagen edificio">
+                </div>
+            </div>
+
+            <!--lado der-->
+            <div class="right-side">
+                <!-- row con contador de pisos -->
                 <div class="counter-pisos-cnt">
                     <h1>PISO <span id="numero-de-piso">1</span></h1>
                 </br>
@@ -49,35 +30,6 @@
                         <button id="button-down"> </button>
                     </div>
                 </div>
-                <!--componente imagen + info disponibilidad y amenities-->
-                <div class="info-dispo">
-                    <img src="./assets/FOTO HDR 3 (1) 4.png" alt="imagen edificio">
-                    <!--grey box-->
-                    <div class="sub-left">
-                        <div id="grey-box">
-                            <div class="info-column">
-                                <h3>Estado de disponibilidad</h3>
-                                <img src="./assets/disponible.svg" alt="estado de disponibilidad">
-                            </div>
-                            <div class="info-column">
-                                <h3>Amenidades generales</h3>
-                                <img src="" alt="imagen con amenities">
-                            </div>
-                            <div class="info-row">
-                                <ul>
-                                    <li><button>CONTACTAR<i class="fab fa-whatsapp"></i></button></li>
-                                    <li class="underline-li"><a href="http://desarrollo.brandvan.io/modulo360/prueba/" target="blank">RECORRIDO 360º</a></li>
-                                    <li class="underline-li"><a href="">DESCARGAR LAYOUT</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-
-
-            <!--lado der-->
-            <div class="right-side">
                 <!--row con areas-->
                 <div class="row-areas">
                     <div class="column-area-metros">
@@ -95,6 +47,19 @@
                 </div>
                 <!--img plano-->
                 <img id="img-plano" src="./assets/MO_rentable_1234.jpg" alt="plano área renable">
+                <!--estado de disponibilidad-->
+                <div class="info-estado-dispo">
+                    <h3>Estado de disponibilidad</h3>
+                    <img src="./assets/disponible.svg" alt="estado de disponibilidad">
+                </div>
+                <!-- div con CTAs-->
+                <div class="info-row">
+                    <ul>
+                        <li><button>CONTACTAR<i class="fab fa-whatsapp"></i></button></li>
+                        <li class="underline-li"><a href="http://desarrollo.brandvan.io/modulo360/prueba/" target="blank">RECORRIDO 360º</a></li>
+                        <li class="underline-li"><a href="">DESCARGAR LAYOUT</a></li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
