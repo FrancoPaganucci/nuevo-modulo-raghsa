@@ -12,6 +12,7 @@ const modulo_disponibilidad = document.getElementById('popup-sct');
 const ver_popup = document.getElementById('pop-up-btn');
 const close_popup = document.getElementById('close-popup');
 const main_view = document.getElementById('mainview-sct');
+const render = document.getElementById('render');
 
 /*// eventos mostrar/ocultar módulo
 function popUpOn() {
@@ -80,11 +81,15 @@ sup_total.addEventListener('click', areaTotalOn);
 
 // eventos de pisos
 function pisoUp() {
-    piso.innerHTML = (parseInt(piso.innerHTML) + 1);
+    const valor_piso = parseInt(piso.innerHTML) + 1
+    piso.innerHTML = valor_piso;
+    render.setAttribute('src', `./assets/${valor_piso}-100.jpg`)
 };
 function pisoDown() {
     if (piso.innerHTML != 1) {
-        piso.innerHTML = (parseInt(piso.innerHTML) - 1);
+        const valor_piso = parseInt(piso.innerHTML) - 1;
+        piso.innerHTML = valor_piso;
+        render.setAttribute('src', `./assets/${valor_piso}-100.jpg`);
     }
 }
 piso_up.addEventListener('click', pisoUp);
